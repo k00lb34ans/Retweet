@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 bot.on('reactionAdd', async (reaction, user) => {
     if (reaction.emoji.name === '🔁') {
         const messageToMove = reaction.message;
-        const channelToMoveTo = bot.channels.cache.get('retweetsChannelID');
+        const channelToMoveTo = bot.channels.cache.get('1337890632210972784');
         if (channelToMoveTo) {
             channelToMoveTo.send(messageToMove);
             message
