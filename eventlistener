@@ -1,0 +1,9 @@
+import Discord from 'discord.js';
+const bot = new Discord.Client();
+bot.on('reactionAdd', async (reaction, user) => {
+    if (reaction.emoji.name === '🔁') {
+        const messageToMove = reaction.message;
+        const channelToMoveTo = bot.channels.cache.get('retweetsChannelID');
+        if (channelToMoveTo) {
+            channelToMoveTo.send(messageToMove);
+            message
